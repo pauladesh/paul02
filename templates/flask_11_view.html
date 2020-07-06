@@ -1,0 +1,7 @@
+{% extends "flask_11_layout.html" %}
+{% block title %} View All Users{% endblock %}
+{% block body %}
+    {% for item in values %}
+        <p>Name: {{item.name}}, email: {{item.email}}</p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{%  extends "flask_11_layout.html" %}
+
+{% block title %}User{% endblock %}
+{% block body %}
+{% with messages=get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<form action="#" method="post">
+    <input type="email" name="email" value="{{email if email}}" placeholder="abc@xyz.com">
+    <p> <button type="submit" class="btn btn-info">Submit</button> </p>
+</form>
+
+{% endblock %}
